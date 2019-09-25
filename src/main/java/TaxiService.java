@@ -4,12 +4,12 @@ public class TaxiService {
 
         if (costOfOrder > costOfOrderForDiscount) {
             discount = costOfOrder * discountPercent / 100;
-            if (discount >= maxDiscount)
+            if (discount >= maxDiscount) {
                 discount = maxDiscount;
-            else
-                discount = discount;
-        } else
+            }
+        } else {
             discount = 0;
+        }
 
         int finalyCostOfOrder = costOfOrder - discount;
         return finalyCostOfOrder;
